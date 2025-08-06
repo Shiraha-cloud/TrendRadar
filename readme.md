@@ -531,7 +531,7 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
 
 4. **自动运行**:
 
-   - 项目已包含`.github/workflows/crawler.yml`配置文件，默认每 30 分钟自动运行一次
+   - 项目已包含`.github/workflows/crawler.yml`配置文件，默认每小时运行一次
    - 你也可以在 GitHub 仓库的 Actions 页面手动触发运行
 
 5. **查看结果**:
@@ -619,11 +619,28 @@ platforms:
 
 |           点赞人            |  金额  |  日期  |             备注             |
 | :-------------------------: | :----: | :----: | :-----------------------: |
+|           S*o            |  1  | 2025.8.05 |   支持一下        |
+|           *侠            |  10  | 2025.8.04 |           |
 |           x*x            |  2  | 2025.8.03 |  trendRadar 好项目 点赞          |
 |           *远            |  1  | 2025.8.01 |            |
 |           *邪            |  5  | 2025.8.01 |            |
 |           *梦            |  0.1  | 2025.7.30 |            |
 |           **龙            |  10  | 2025.7.29 |      支持一下      |
+
+<details>
+<summary><strong>👉 微信推送通知的折中方案</strong></summary>
+<br>
+
+> 由于该方案是基于企业微信的插件机制，推送样式也十分不同，所以相关实现我暂时不准备纳入当前项目
+
+- fork 这位兄台的项目 https://github.com/jayzqj/TrendRadar
+- 完成上方的企业微信推送设置 
+- 按照下面图片操作
+<img src="_image/wework.png"  title="github"/>
+
+- 配置好后，手机上的企业微信 app 删除掉也没事
+
+</details>
 
 <details>
 <summary><strong>👉 自荐</strong></summary>
@@ -675,7 +692,7 @@ flowchart TD
     F --> G[🎯 选择运行模式<br/>config/config.yaml<br/>daily/current/incremental]
     
     G --> H[✅ 配置完成]
-    H --> I[🤖 系统每30分钟自动运行]
+    H --> I[🤖 系统根据设定时间自动运行]
     
     I --> J[📊 爬取各大平台热点]
     J --> K[🔍 根据关键词筛选]
